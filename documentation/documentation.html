@@ -1,0 +1,943 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	
+	<title>Documentation</title>
+	
+	<!-- Framework CSS -->
+	<link rel="stylesheet" href="assets/blueprint-css/screen.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="assets/blueprint-css/print.css" type="text/css" media="print">
+	<!--[if lt IE 8]><link rel="stylesheet" href="assets/blueprint-css/ie.css" type="text/css" media="screen, projection"><![endif]-->
+	<link rel="stylesheet" href="assets/blueprint-css/plugins/fancy-type/screen.css" type="text/css" media="screen, projection">
+	<style type="text/css" media="screen">
+		p, table, hr, .box { margin-bottom:25px; }
+		.box p { margin-bottom:10px; }
+	</style>
+	
+</head>
+<body>
+<div class="container">
+		
+		<h1 class="center">Clean CV / Resume / Portfolio Website</h1>
+		
+		<br>
+		
+		<div class="">
+			<div class="span-6 colborder info prepend-1">
+				<p class="prepend-top">
+					<strong>
+					Author Info<br><br>
+					Profile: <a href="http://themeforest.net/user/bitpub">themeforest.net/user/bitpub</a><br>
+					Website: <a href="http://www.bitpublimedia.ro/">www.bitpublimedia.ro</a><br>
+					Twitter: <a href="https://twitter.com/bitpub">twitter.com/bitpub</a>
+					</strong>
+				</p>
+			</div><!-- end div .span-6 -->		
+	
+			<div class="span-12 last">
+				<p class="prepend-top append-0">Thank you for purchasing my template. If you have any questions that are beyond the scope
+				 of this help file feel free to contact me using the form on my profile page. If you want to stay up to date with file updates
+				 and new releases, follow me on twitter or send me an email with your info and I will add you to my mailing list.
+				 Thanks so much!</p>
+			</div>
+		</div><!-- end div .borderTop -->
+		
+		<br style="clear:both;">
+		<br>
+		
+				
+		<h2 id="nav0">Table of Contents</h2>
+		<ol>
+			<li><a href="#nav1">How the documentation is organized</a></li>
+			<li><a href="#nav2">Before we get started</a></li>
+			<li><a href="#nav3">Basic template layout</a></li>
+			<li><a href="#nav4">Cv/Resume Pages</a></li>
+			<li><a href="#nav5">Portfolio Pages</a></li>
+			<li><a href="#nav6">Contact Page</a></li>
+			<li><a href="#nav7">Scripts Used</a></li>
+			<li><a href="#nav8">Credits</a></li>
+		</ol>
+		
+		<hr />
+		
+		<h2 id="nav1">How the documentation is organized <a href="#nav0" class="clear">top</a></h2>
+		
+		<p>The documentation is written in a step by step format. First it covers how to customize the general look of the
+		 template and then it goes into specifics like customizing the cv's, the portfolio and the contact page. All these sections of the documentation
+		 make references to the scripts section where it lists all the scripts and plugins this template has, what they do and how you can use them.</p>
+		
+		<p><strong>Note:</strong> I wanted to make the documentation as beginner friendly as possible and for that reason you'll find that it
+		 also goes in details on things that are obvious to an advanced user. So if you are advanced just skim read the sections you are not interested in.</p>
+		
+		<hr />
+		
+		<h2 id="nav2">Before we get started <a href="#nav0" class="clear">top</a></h2>
+		
+		<p>Before we proceed I want to make sure everyone knows that you can use multiple classes on a single element, as the tempalte relies greatly on this:</p>
+
+		<blockquote>
+		
+		<p>One of the lesser known tricks with CSS is the fact that you don't have to limit your elements to just one class.
+		 If you need to set multiple classes on an element, you add them simply by separating them with a space in your attribute. For example:
+		</p>
+		<pre>
+		
+&lt;p class="pullquote btmmargin left"&gt;...&lt;/p&gt;
+		</pre>
+		<p>This sets the following three classes on that paragraph tag:
+		</p><ul>
+		<li>pullquote
+		</li><li>btmmargin
+		</li><li>left</li></ul>
+		<p>You would assign these as generic classes in your CSS:
+		
+		</p>
+		<pre>
+		
+.pullquote { ... }
+.btmmargin { ... }
+p.left { ... }
+		</pre>
+
+		<p>If you set the class to a specific element, you can still use it as part of a list of classes,
+		 but be aware that it will only affect those elements that are specified in the CSS.
+
+		</p></blockquote>
+		<p>Source - <a href="http://webdesign.about.com/od/css/qt/tipcssmulticlas.htm">http://webdesign.about.com/od/css/qt/tipcssmulticlas.htm</a>
+		
+		<hr />
+		
+		<h2 id="nav3">Basic template layout <a href="#nav0" class="clear">top</a></h2>
+		
+		<h3>Select which page templates to use</h3>
+		
+		<p>The template is situated in the <strong>/html</strong> folder of the download .zip. 
+		<br>Below you will find an overview of the files and folders that make up the template.</p>
+		
+		<img src="assets/images/4.jpg" width="780" height="250" alt="">
+		
+		<p>Since this template comes with alternatives to almost every page, the first step you have
+		 to take is decide which alternative you want to use on your website and delete the rest
+		 (I'm assuming you keep a copy of the full tempalte somwhere so you can use later on use the deleted page templates if you feel like it):</p>
+		 <ol>
+			 <li>For the CV choose one between: index.html, index-2.html and index-3.html. Delete the other two and if you choose either index-2.html
+			  or index-3.html then rename it to index.html so that the links already set up in the template will keep working</li>
+			 <li>For the main portfolio choose one between: portfolio.html and portfolio-2.html. Delete the other one and if you
+			  choose portfolio-2.html then rename it to portfolio.html so that the links already set up in the template will keep working</li>
+			 <li>For the inner portfolio page choose one between: portfolio-inner-page.html and portfolio-inner-page-2.html. Delete the other one and if you
+			  choose portfolio-inner-page-2.html then rename it to portfolio-inner-page.html so that the links already set up in the template will keep working </li>
+		 </ol>
+		
+		<h3>Overview of the basic template layout.</h3>
+	
+		<img src="assets/images/1.jpg" width="780" height="441" alt="" >
+		
+		<pre>
+		
+&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+&lt;head&gt;
+
+	&lt;link href="_layout/style.css"       rel="stylesheet" type="text/css" media="all"   /&gt;
+	&lt;link href="_layout/style-print.css" rel="stylesheet" type="text/css" media="print" /&gt;
+
+	&lt;!-- //////// DD_belatedPNG - Png Fix for IE ////////  --&gt;
+	&lt;!--[if IE 6 ]&gt;
+		&lt;script type="text/javascript" src="_layout/js/DD_belatedPNG_0.0.7a-min.js"&gt;&lt;/script&gt;
+		&lt;script type="text/javascript"&gt;
+			DD_belatedPNG.fix('#header,#content,#footer');
+		&lt;/script&gt;
+	&lt;![endif]--&gt;
+	
+	&lt;!-- //////// Cufon Font Replacement ////////  --&gt;
+	&lt;script type="text/javascript" src="_layout/js/cufon/cufon-yui.js"&gt;&lt;/script&gt;
+	&lt;script type="text/javascript" src="_layout/js/cufon/hattori_hanzo.font.js"&gt;&lt;/script&gt;
+
+	&lt;!-- //////// Tipsy - custom Tooltips ////////  --&gt;
+	&lt;link rel="stylesheet" type="text/css" href="_layout/js/tipsy/css.tipsy.css" /&gt;
+	&lt;script type="text/javascript" src="_layout/js/tipsy/jquery.tipsy.js"&gt;&lt;/script&gt;
+
+	&lt;!-- //////// PrettyPhoto ////////  --&gt;
+	&lt;link rel="stylesheet" type="text/css" href="_layout/js/prettyphoto/css.prettyPhoto.css" /&gt;
+	&lt;script type="text/javascript" src="_layout/js/prettyphoto/jquery.prettyPhoto.js"&gt;&lt;/script&gt;
+	
+	&lt;!-- //////// Customs JS  ////////  --&gt;	
+	&lt;script type="text/javascript"&gt;
+	/* &lt;![CDATA[ */	                                         
+		$(document).ready(function(){
+		
+			// font replacement
+			if ( ! ( $.browser.msie &amp;&amp; ($.browser.version == 6) ) )
+			{ 	
+				$("h1#name").css({'font-size':'46px', 'padding-top':'20px' , 'margin-bottom':'0px' });
+				Cufon.replace('#portfolio h2, h2.cv-section-name, h1#name'); // using cufon with IE6 breaks the layout in some cases
+				
+			}	
+			
+			// tooltips
+			$('.tip').tipsy({gravity: 'e'});	//  apply class .tip to any &lt;a&gt; tag to make it's  title be displayed like a tooltip
+			
+			// lightbox
+			$("a[rel^='prettyPhoto']").prettyPhoto({
+				theme: 'light_square',
+				hideflash: false, 		// Hides all the flash object on a page, set to TRUE if flash appears over prettyPhoto
+				wmode: 'opaque', 		// Set the flash wmode attribute
+				autoplay: true, 		// Automatically start videos: True/False
+				modal: false 			// If set to true, only the close button will close the window
+			});
+		
+		});
+	/* ]]&gt; */			
+	&lt;/script&gt; 
+	
+&lt;/head&gt;
+&lt;body&gt;
+	
+	&lt;noscript&gt;
+		&lt;link href="_layout/nojs.css" rel="stylesheet" type="text/css" media="all" /&gt;
+		&lt;div id="nojs"&gt;JavaScript seems to be Disabled!
+		This website works best with JavaScript enabled.&lt;/div&gt;
+	&lt;/noscript&gt;
+	
+	&lt;div id="wrap"&gt;
+	
+		&lt;div id="header"&gt;
+			
+			...
+			
+		&lt;/div&gt;&lt;!-- end #header --&gt;
+		
+		&lt;div id="content" class="fixed"&gt;
+		
+			...
+		
+		&lt;/div&gt;&lt;!-- end #content --&gt;
+		
+		&lt;div id="footer" class="fixed"&gt;
+			
+			...
+			
+		&lt;/div&gt;&lt;!-- end #footer --&gt;
+		
+	&lt;/div&gt;&lt;!-- end #wrap --&gt;
+	
+&lt;/body&gt;
+&lt;/html&gt;			
+		</pre>
+		
+		<ul>
+			<li>Each html page links to three css pages
+				<ol>
+					<li><span class="highlight">style.css</span> - general stylesheet</li>
+					<li><span class="highlight">style-print.css</span> - print stylesheet</li>
+					<li><span class="highlight">nojs.css</span> - if Javascript is unavailable then hide and change some elements</li>
+				</ol>
+				<br>
+					<img src="assets/images/5.jpg">
+					<p style="text-align:center">The content of <strong>/html/_layout</strong></p>
+				</li>
+			</li>
+			
+			<li> To make things more intuitive and clear, much of the template is built through a technique of useing multiple classes on a single element,
+			on which I went to into detail at the start of the documentation. Here is the list of classes and what they do ( taken from style.css ):
+				<ol>
+					<li><span class="highlight">.fixed</span> - Clear fix hack. Apply it to div's that have floated elements in them to clear those. </li>
+					<li><span class="highlight">.clear</span> - clear:both</li>
+					<li><span class="highlight">.block</span> - displays an element as block</li>
+					<li><span class="highlight">.float-left</span> - left floats an element</li>
+					<li><span class="highlight">.float-right</span> - right floats an element</li>
+					<li><span class="highlight">.col-1</span> - sets elements width to 700px</li>
+					<li><span class="highlight">.col-2</span> - sets elements width to 460px</li>
+					<li><span class="highlight">.col-3</span> - sets elements width to 220px</li>
+					<li><span class="highlight">.padded-right</span> - adds a 20px right padding to an element</li>
+				</ol> 
+				So for example the following code:
+				<pre>
+				
+&lt;div id="container" class="fixed"&gt;
+			
+	&lt;div class="col-2 float-left padded-right"&gt;
+		...
+	&lt;/div&gt;
+
+	&lt;div class="col-3 float-left"&gt;
+		...		
+	&lt;/div&gt;
+	
+&lt;/div&gt;
+				</pre>
+				#container clears the two floated div's because it has the .fixed class applyed.
+				<br>the first &lt;div&gt; has a width of 460px ( .col-2 class), a right padding of 20px ( .padded-right class ) and is floated left ( .float-left)
+				while the second &lt;div&gt; has a width of 220px and is floated left as well
+				
+			</li>
+			
+			<li>The jQuery JavaScript Library along with 3rd party scripts are used to create the interactive part of the template.
+			The 4 main scripts used on every page are:
+				<ol>
+					<li>DD_BelatedPNG - adds png transparancy support in for IE6</li>
+					<li>Cufon - font replacement</li>
+					<li>Tipsy - display tooltips out of &lt;a&gt;'s title attribute</li>
+					<li>PrettyPhoto - lightbox</li>
+				</ol>
+				Find out more about them and how to use them in the <a href="#nav7">scripts section of the documentation</a>.
+			 </li>
+			
+			<li>If javascript is NOT available then the #nojs &lt;div&gt; wrapped in the  &lt;noscript&gt; tag will be visible on the page informing
+			visitors that for the best experience they need to have javascript turned on.
+			<pre>
+			
+&lt;noscript&gt;
+	&lt;link href="_layout/nojs.css" rel="stylesheet" type="text/css" media="all" /&gt;
+	&lt;div id="nojs"&gt;JavaScript seems to be Disabled!
+	This website works best with JavaScript enabled.&lt;/div&gt;
+&lt;/noscript&gt;			
+			</pre>
+			</li>
+			 
+			<li>The templates layout consists of 3 main &lt;div&gt;'s contained in another &lt;div&gt;
+				<ol>
+					<li><span class="highlight">#header</span> - personal info + main navigation</li>
+					<li><span class="highlight">#content</span> - cv, portfolio and contact info</li>
+					<li><span class="highlight">#footer</span> - copyright info + back to top</li>
+					<li><span class="highlight">#wrap</span> - wraps around the above 3 div's positioning them centrally on the page</li>
+				</ol>
+			</li>
+			
+		</ul>
+		
+		<h3>The Header</h3>
+		
+		<img src="assets/images/2.jpg">
+		
+		<pre>
+		
+&lt;div id="header"&gt;
+			
+	&lt;div id="block-top"&gt;&lt;/div&gt;
+	
+	&lt;div id="personal-info" class="fixed"&gt;
+	
+		&lt;a id="picture-of-you" href="_content/640x550-placeholder.jpg" 
+		title="your picture" rel="prettyPhoto"&gt;
+			&lt;img src="_content/100x100-placeholder.jpg" width="100" height="100" alt="" /&gt;
+		&lt;/a&gt;
+		
+		&lt;h1 id="name"&gt;John Smith&lt;/h1&gt;
+		&lt;h2 id="what-you-do"&gt;Job title / Expertise&lt;/h2&gt;
+		
+	&lt;/div&gt;&lt;!-- end #personal-info --&gt;
+			
+	&lt;ul id="nav" class="fixed"&gt;
+		&lt;li&gt;&lt;a href="index.html" class="active"&gt;Resume&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;/&lt;/li&gt;
+		&lt;li&gt;&lt;a href="portfolio.html"&gt;Portfolio&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;/&lt;/li&gt;
+		&lt;li&gt;&lt;a href="contact.html"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;&lt;!-- end #nav --&gt;
+
+	&lt;div class="divider"&gt;&lt;/div&gt;
+	
+&lt;/div&gt;&lt;!-- end #header --&gt;		
+		</pre>
+		
+		<p>Editing the header is pretty simple:</p>
+		<ol>
+			<li>Change the picture with another 100 x 100 px of you. If you don't want a picture on the cv just delete the whole thing below:
+			<pre>
+&lt;a id="picture-of-you" href="_content/640x550-placeholder.jpg" title="your picture" rel="prettyPhoto"&gt;
+	&lt;img src="_content/100x100-placeholder.jpg" width="100" height="100" alt="" /&gt;
+&lt;/a&gt;</pre>
+			</li>
+			<li>Change the Name</li>
+			<li>Change the Job title / Expertise</li>
+			<li>Unless you want to add an new item or change the page names you can leave the navigation untouched</li>
+		</ol>
+		
+		<h3>The Footer</h3>
+		
+		<img src="assets/images/3.jpg">
+		
+		<pre>
+		
+&lt;div id="footer" class="fixed"&gt;
+			
+	&lt;div class="divider2"&gt;&lt;/div&gt;
+	
+	&lt;p id="copyright"&gt;&amp;copy; 2010 John Smith. All rights reserved.&lt;/p&gt;
+	&lt;a href="#" id="top"&gt;&amp;#710; Top&lt;/a&gt;
+	
+&lt;/div&gt;&lt;!-- end #footer --&gt;
+		</pre>
+
+		<p>In the footer just change the copyright notice.</p>
+		
+		<hr />
+		
+		<h2 id="nav4">Cv/Resume Pages <a href="#nav0" class="clear">top</a></h2>
+		
+		<p>There are 3 CV styles. To keep the code simple what I've done is: </p>
+		
+		<ol>
+			<li>In the html: wrapped a div with an ID around each cv: #cv-1, #cv-2 and #cv-3</li>
+			<li>In the css: I start by writing the general styling for the cv pages and then using the three id's
+			 from above I make changes to the general styling specific to each cv template</li>
+		</ol>
+		
+		<p>In the html</p>
+		<pre>
+		
+&lt;div id="cv-1"&gt;
+   ...
+&lt;/div&gt;
+			
+		</pre>
+		
+		<p>In the css</p>
+		
+		<pre>
+/* =CV
+----------------------------------*/
+
+.cv-section{ margin-bottom:25px; }
+	.last{ margin-bottom:0px; }
+	
+	li.cv-item  p{ margin-bottom:10px; }
+	li.cv-item ul{ list-style:inside; padding-bottom:10px; list-style-type:disc; }
+	li.cv-item ol{ list-style:inside; list-style-type:decimal; padding-bottom:10px; }
+
+	h2.cv-section-name{ text-transform:uppercase; font-size:22px; padding-bottom:10px; color:#2F6AB3;  }
+	ul.cv-section-items{ list-style:outside; list-style-type:none;  }
+	
+	ul.cv-section-items li.cv-item{ border-top:1px solid #DBDEE2; padding:10px 15px; }
+	
+		ul.cv-section-items li.cv-item h4{ font-size:12px; float:right; font-weight:normal; color:#666; }
+		ul.cv-section-items li.cv-item h2{ font-size:16px; font-weight:bold; color:#272D36; }
+		ul.cv-section-items li.cv-item h3{ font-size:14px; font-style:italic; padding-bottom:10px; font-weight:normal;}
+		
+		ul.cv-section-items li span.topic{ font-weight:bold; display:block; float:left; width:150px;  }
+		
+		ul.cv-section-items li span.level{ width:140px; display:block; float:left; }
+				
+				ul.cv-section-items li span.l-1{ text-indent:-9999px; background:#ffffff url(images/level-1.jpg) no-repeat top left; }
+				ul.cv-section-items li span.l-2{ text-indent:-9999px; background:#ffffff url(images/level-2.jpg) no-repeat top left; }
+				ul.cv-section-items li span.l-3{ text-indent:-9999px; background:#ffffff url(images/level-3.jpg) no-repeat top left; }
+				ul.cv-section-items li span.l-4{ text-indent:-9999px; background:#ffffff url(images/level-4.jpg) no-repeat top left; }
+				ul.cv-section-items li span.l-5{ text-indent:-9999px; background:#ffffff url(images/level-5.jpg) no-repeat top left; }
+				ul.cv-section-items li span.l-6{ text-indent:-9999px; background:#ffffff url(images/level-6.jpg) no-repeat top left; }
+				ul.cv-section-items li span.l-7{ text-indent:-9999px; background:#ffffff url(images/level-7.jpg) no-repeat top left; }			
+		
+<span class="highlight">#cv-1{}</span>
+		
+	<span class="highlight">#cv-1 ul.cv-section-items li span.level{ margin-right:20px; }</span>
+		
+#cv-2{}
+			
+	#cv-2 h2.cv-section-name{ border-top:3px solid #DBDEE2; width:150px; float:left; padding-top:15px; }	
+	#cv-2 ul.cv-section-items{ margin-top:1px; width:550px; float:right; }
+	#cv-2 ul.cv-section-items li span.level{ margin-right:10px; margin-bottom:10px; }
+					
+	#cv-2 #technical-skills ul.cv-section-items li span.topic{ width:370px; }
+				
+#cv-3{}
+	
+	#cv-3 h2.cv-section-name{ padding-top:15px; border-top:6px solid #DBDEE2; }	
+	#cv-3 ul.cv-section-items li.cv-item{ padding:10px 1px;}
+	#cv-3 ul.cv-section-items li.cv-item h4{ float:left; width:150px; }
+	#cv-3 ul.cv-section-items li span.topic{ width:150px; }
+	#cv-3 ul.cv-section-items li span.level{ margin-right:10px;}
+	
+	#cv-3 ul.cv-section-items li.cv-item .cv-item-content{ float:right; width:540px; }
+	#cv-3 #technical-skills ul.cv-section-items li span.topic{ float:none; width:540px; font-size:16px; }
+		</pre>
+		
+		<p>A Cv is made up of <strong>cv-section</strong>'s, each section having a <strong>cv-section-name</strong> and one or more <strong>cv-item</strong>'s grouped in a <strong>cv-section-items</strong></p>
+		
+		<p>Below is an overview of a cv-section:</p>
+		
+		<img src="assets/images/6.jpg">
+		
+		<pre>
+		
+&lt;!-- // WORK EXPERIENCE      ////////////////////////////////////////////////////// --&gt;
+&lt;div class="<span class="highlight">cv-section</span> col-1 fixed"&gt;
+
+	&lt;h2 class="<span class="highlight">cv-section-name</span>"&gt;Work Experience&lt;/h2&gt;
+	
+	&lt;ul class="<span class="highlight">cv-section-items</span>"&gt;
+	
+		&lt;li class="<span class="highlight">cv-item</span>"&gt;
+			&lt;<span class="highlight">h4</span>&gt;Jul 2008 - Present&lt;/h4&gt;
+			&lt;<span class="highlight">h2</span>&gt;Senior Project Manager&lt;/h2&gt;
+			&lt;<span class="highlight">h3</span>&gt;Web Design Studios, Full-Time&lt;/h3&gt;
+			&lt;br /&gt;
+			&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed
+			 erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim.
+			 Phasellus molestie magna non est bibendum non venenatis nisl tempor.&lt;/p&gt;
+			&lt;ul&gt;
+				&lt;li&gt;Nunc in dolor id lacus dictum euismod molestie ut tortor&lt;/li&gt;
+				&lt;li&gt;Donec eget nunc pulvinar tortor sollicitudin consectetur id eget eros&lt;/li&gt;
+				&lt;li&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit&lt;/li&gt;
+			&lt;/ul&gt; 
+		&lt;/li&gt;
+		&lt;li class="cv-item"&gt;
+			&lt;h4&gt;Apr 2007 - Aug 2008&lt;/h4&gt;
+			&lt;h2&gt;Front End Developer&lt;/h2&gt;
+			&lt;h3&gt;Acme Advertising, Full-Time&lt;/h3&gt;
+			&lt;br /&gt;
+			&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed
+			 erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim.
+			 Phasellus molestie magna non est bibendum.&lt;/p&gt;
+			&lt;ul&gt;
+				&lt;li&gt;Nunc in dolor id lacus dictum euismod molestie ut tortor&lt;/li&gt;
+				&lt;li&gt;Donec eget nunc pulvinar tortor sollicitudin consectetur id eget eros&lt;/li&gt;
+				&lt;li&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit&lt;/li&gt;
+			&lt;/ul&gt;
+		&lt;/li&gt;
+		
+	&lt;/ul&gt;&lt;!-- end .cv-section-items --&gt;
+
+&lt;/div&gt;&lt;!-- end .cv-section --&gt;		
+		</pre>
+		
+		<p>The code is so simple that there is not much more to say about it.
+		<br> If you need more .cv-section's you can easily duplicate one of the existing ones, add or remove .cv-item's and then just replace the placeholder text with your own and you are done.</p>
+		
+		<p>Before we move to the portfolio let's look at another .cv-section that is slightly different then the rest:</p>
+		
+		<img src="assets/images/7.jpg">
+		
+		<pre>
+
+&lt;div class="cv-section col-1 fixed"&gt;
+
+	&lt;h2 class="cv-section-name"&gt; Technical Skills&lt;/h2&gt;
+	
+	&lt;ul class="cv-section-items"&gt;
+		
+		&lt;li class="cv-item"&gt; 
+			&lt;span class="<span class="highlight">topic</span>"&gt;Front-end Design&lt;/span&gt;        
+			&lt;span class="<span class="highlight">level</span> <span class="highlight">l-6</span>"&gt;Extensive skillset&lt;/span&gt;    
+			Xhtml, Css 3.0, Javascript jQuery Framework
+		&lt;/li&gt;
+		
+	...			
+		
+		</pre>
+		
+		<p>In this case .cv-item contains three &lt;span&gt;'s</p>
+		
+		<ol>
+			<li><span class="highlight">.topic</span> - Used to line up things nicely. The span this class is applyed to will have a 150px width.</li>
+			<li><span class="highlight">.level</span> - Used to line up things nicely as well as holds a text description regaring the level of knowledge of a skill.
+			The span this class is applyed to will have a 140px width.</li>
+			<li><span class="highlight">.l-1</span> ... <span class="highlight">.l-7</span> - Replaces the text description for the skill level with a star rating: .l-1 is 1 stars out of 7 all the way up to .l-7 wich is 7 stars out of 7. Must be applyed to a span that already has the class .level applyed!</li>
+		</ol>
+		
+		<hr />
+		
+		<h2 id="nav5">Portfolio Pages <a href="#nav0" class="clear">top</a></h2>
+		
+		<img src="assets/images/9.jpg">
+		
+		<pre>
+		
+&lt;div class="<span class="highlight">portfolio-item col-1 fixed</span>"&gt;
+					
+	&lt;div class="<span class="highlight">col-2 float-left padded-right</span>"&gt;
+		
+		&lt;a href="_content/640x550-placeholder.jpg" class="bordered" rel="prettyPhoto[portfolio]"&gt;
+			&lt;img src="_content/456x211-placeholder.jpg" width="456" height="211" alt="" /&gt;					
+		&lt;/a&gt;
+							
+	&lt;/div&gt;
+	&lt;div class="<span class="highlight">col-3 float-right</span>"&gt;
+		
+		&lt;br /&gt;
+			
+		&lt;h2&gt;Lorem ipsum dolor&lt;/h2&gt;
+	
+		&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eu enim sit
+		 amet quam dapibus sodales nec id nisl. Ut condimentum purus.&lt;/p&gt;
+		
+		&lt;p&gt;&lt;a href="portfolio-inner-page.html" class="read-more"&gt;Read More&lt;/a&gt;&lt;/p&gt;
+		
+	&lt;/div&gt;
+	
+&lt;/div&gt;&lt;!-- end .portfolio-item --&gt;		
+		</pre>
+		
+		<p>The portfolio page layouts are created through a technique of useing multiple classes on a single element. 
+		<br>I have already made a detailed list of what classes are used and what they do in <strong>Overview of the basic template layout</strong>. 
+		<br>Review it if necessary.</p>
+
+		<p>The <strong>InsetBorderEfect</strong> script has been used to create borders around the portfolio item preview images, these border
+		 dissapearing on mouse hover revealing more of the preview image. In the scripts sections you can read more about how it works and how to use it.</p>
+		
+		<p>The inner portfolio pages have been built in the same manner as the main ones. </p>
+		
+		<img src="assets/images/10.jpg">
+		
+		<p>The only thing worth mentioning is the presence of the easyslider script on the page, the rest of it being simple to edit.</p>
+		
+		<p>Easyslider transforms an unordered list in a slideshow. It's usage is covered in the Scripts section.</p>
+				
+		<hr />
+		
+		<h2 id="nav6">Contact Page <a href="#nav0" class="clear">top</a></h2>
+		
+		<img src="assets/images/8.jpg">
+		
+		<p>The contact page is pretty easy to edit. The two things that might prove more hard are setting up the contact form and the tweet script:</p>
+		
+		<p>To make the contact script work you just have to go in the <span class="highlight">send.php</span> 
+		file located in <span class="highlight">_layout/php/</span> and
+		change in the line below the email adress with your own.</p>
+		 
+		<pre>		
+/////////// Add your own email below ////////////////
+
+define("WEBMASTER_EMAIL", 'youradress@yourdomain.com');		
+		</pre>
+				 
+		 <p>The way the email works is that the contact.html file calls through ajax the send.php file 
+		 it is processed and the result is returned to the contact.html page and placed in &lt;p id="formstatus"&gt;&lt;/p&gt;. So you must have it loaded on a
+		 server with php enabled to get it to work otherwise it will return the php code.</p>
+		
+		<p>To set up the tweet script you just have to add your twitter.com user:</p>
+		
+		<pre>
+// display last tweet
+ $(".tweet").tweet({
+	<span class="highlight">username: "bitpub",</span>
+	join_text: "auto",
+	avatar_size: 32,
+	count: 1,
+	auto_join_text_default: "said,",
+	auto_join_text_ed: "i",
+	auto_join_text_ing: "i was",
+	auto_join_text_reply: "i replied to",
+	auto_join_text_url: "i was checking out",
+	loading_text: "loading tweets..."
+});		
+		</pre>
+		
+		<hr />
+		
+		<h2 id="nav7">Scripts Used <a href="#nav0" class="clear">top</a></h2>
+		
+		<h3 id="nav71">1. <a href="http://dillerdesign.com/experiment/DD_belatedPNG/#license" target="_blank">DD_BelatedPNG</a> - png transparancy fix for IE6</h3>
+		
+		<pre>
+		
+&lt;!-- //////// DD_belatedPNG - Png Fix for IE ////////  --&gt;
+&lt;!--[if IE 6 ]&gt;
+	&lt;script type="text/javascript" src="_layout/js/DD_belatedPNG_0.0.7a-min.js"&gt;&lt;/script&gt;
+	&lt;script type="text/javascript"&gt;
+		DD_belatedPNG.fix('#header,#content,#footer');
+	&lt;/script&gt;
+&lt;![endif]--&gt;		
+		</pre>		
+		
+		<p>This is a Javascript library that sandwiches PNG image support into IE6 without much fuss. You can use PNGs as the
+		 src of an &lt;img/&gt; element or as a background-image property in CSS.</p>
+		
+		<p>Usage is very simple:</p>
+
+		<ol>
+			<li>add function calls to DD_belatedPNG.fix().</li>
+			<li>fix() requires one argument: a text string representing a CSS selector.</li>
+			<li>you can roll a bunch of CSS selectors into one argument, just like how you'd do a selector group in a CSS file: fix('.example1, .example2, img');</li>
+		</ol>
+
+		<h3 id="nav72">2. <a href="http://wiki.github.com/sorccu/cufon" target="_blank">Cufon</a> - font replacement</h3>
+		
+		<img src="assets/images/cufon.jpg">
+		
+		<pre>
+				
+&lt;!-- //////// Cufon Font Replacement ////////  --&gt;
+&lt;script type="text/javascript" src="_layout/js/cufon/cufon-yui.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="_layout/js/cufon/hattori_hanzo.font.js"&gt;&lt;/script&gt;
+
+&lt;!-- //////// Customs JS  ////////  --&gt;	
+&lt;script type="text/javascript"&gt;
+/* &lt;![CDATA[ */	                                         
+	$(document).ready(function(){
+	
+		// font replacement
+		if ( ! ( $.browser.msie &amp; ($.browser.version == 6) ) )
+		{ 	
+			$("h1#name").css({'font-size':'46px', 'padding-top':'20px' , 'margin-bottom':'0px' });
+			Cufon.replace('#portfolio h2, h2.cv-section-name, h1#name'); // using cufon with IE6 breaks the layout in some cases
+			
+		}	
+		
+	....
+	
+	});
+/* ]]&gt; */			
+&lt;/script&gt; 	
+		</pre>
+		
+		<p>Cufon is used to replace standard fonts with more stylish ones.
+			The custom font the template uses is called <a href="http://www.fontsquirrel.com/fonts/Hattori-Hanzo" target="_blank">Hattori-Hanzo</a>.</p>
+
+		<p>If you want to use another custom font, first you must generate a file with that the cufon can use. 
+		You can do this <a href="http://cufon.shoqolate.com/generate/" target="_blank">here</a>. Then add the file in 
+		<span class="highlight">/_layout/js/cufon</span> and change this line 
+		<span class="highlight">&lt;script type="text/javascript" src="_layout/js/cufon/hattori_hanzo.font.js"&gt;&lt;/script&gt;</span>
+		with a link to the new file.</p>
+		
+		<p>Usage of cufon is very simple:</p>
+		<ol>
+
+			<li>add function calls to Cufon.replace().</li>
+			<li>replace() requires one argument: a text string representing a CSS selector.</li>
+		</ol>
+		
+		<p><strong>Note:</strong> Cufon font replacement is only called if the browser is not Internet Explorer 6 [<span class="highlight"> if ( ! ( $.browser.msie &amp; ($.browser.version == 6) ) )</span> ]<br><br>
+		 The css stylesheet is set up so that the template would look good even without Cufon available and then if javascript support is present and the browser is not Internet Explorer 6 ( which cause layout problems with cufon active) we modify some of the css styling to make it look good with Cufon and then enable  Cufon font replacement. </p>
+		
+		<h3 id="nav73">3. <a href="http://onehackoranother.com/projects/jquery/tipsy/" target="_blank">Tipsy</a> - display tooltips out of &lt;a>'s title attribute</h3>
+		
+		<p>Another script added is Tipsy - a jQuery pluggin for creating a Facebook-like tooltips effect based on an anchor tag's title attribute.</p>
+
+		<img src="assets/images/tipsy.jpg">
+		
+		<pre>
+		
+&lt;!-- //////// Tipsy - custom Tooltips ////////  --&gt;
+&lt;link rel="stylesheet" type="text/css" href="_layout/js/tipsy/css.tipsy.css" /&gt;
+&lt;script type="text/javascript" src="_layout/js/tipsy/jquery.tipsy.js"&gt;&lt;/script&gt;
+
+&lt;!-- //////// Customs JS  ////////  --&gt;	
+&lt;script type="text/javascript"&gt;
+/* &lt;![CDATA[ */	                                         
+	$(document).ready(function(){
+		
+	...
+	
+	// tooltips<br />
+	<span class="highlight">$('.tip').tipsy({gravity: 'e'});</span>	//  apply class .tip to any &lt;a&gt; tag
+	                                       // to make it's  title be displayed like a tooltip
+	...
+	
+	});
+/* ]]&gt; */			
+&lt;/script&gt; 
+
+-----
+
+&lt;a href="#" id="download" title="Download CV" <span class="highlight">class="tip"</span>&gt;Download CV&lt;/a&gt;
+
+etc.
+		</pre>
+
+		
+		<p>It is configured to transform the title attribute of anchor tags &lt;a&gt; with the class <span class="highlight">class="tip"</span> into tooltips.
+		 For more customization purposes check out the documentation and examples at <a href="http://onehackoranother.com/projects/jquery/tipsy/#examples" target="_blank">http://onehackoranother.com/projects/jquery/tipsy/#examples</a></p>
+		 
+		 <p><strong>Note:</strong> This template is not using the latest version of the tipsy script so only north/east/west/south positining is available! Upgrade the script if you want to use the new functionaity presented on the oficial homepage!</p>
+		
+		<h3 id="nav74">4. <a href="http://www.no-margin-for-errors.com/projects/prettyphoto-jquery-lightbox-clone/" target="_blank">PrettyPhoto</a> - lightbox</h3>
+		
+		<img src="assets/images/prettyphoto.jpg">
+		
+		<p>PrettyPhoto is a jQuery based lightbox clone. Not only does it support images, it also add support for videos, flash, YouTube, iFrames. It’s a full blown media lightbox.</p>
+		
+		<pre>
+		
+&lt;!-- //////// PrettyPhoto ////////  --&gt;
+&lt;link rel="stylesheet" type="text/css" href="_layout/js/prettyphoto/css.prettyPhoto.css" /&gt;
+&lt;script type="text/javascript" src="_layout/js/prettyphoto/jquery.prettyPhoto.js"&gt;&lt;/script&gt;
+
+&lt;!-- //////// Customs JS  ////////  --&gt;	
+&lt;script type="text/javascript"&gt;
+/* &lt;![CDATA[ */	                                         
+	$(document).ready(function(){
+		
+	...
+	
+	// lightbox
+	$("<span class="highlight">a[rel^='prettyPhoto']</span>").prettyPhoto({
+		theme: 'light_square',
+		hideflash: false, 		// Hides all the flash object on a page, set to TRUE if flash appears over prettyPhoto
+		wmode: 'opaque', 		// Set the flash wmode attribute
+		autoplay: true, 		// Automatically start videos: True/False
+		modal: false 			// If set to true, only the close button will close the window
+	});
+
+   ...
+   });
+/* ]]&gt; */			
+&lt;/script&gt; 
+	
+------
+
+&lt;a id="picture-of-you" href="_content/640x550-placeholder.jpg" title="your picture" <span class="highlight">rel="prettyPhoto"</span>&gt;
+	&lt;img src="_content/100x100-placeholder.jpg" width="100" height="100" alt="" /&gt;
+&lt;/a&gt;
+		</pre>
+	
+		<p>How to use:</p>
+		
+		<ul>
+			<li>Open a single Image: Add <strong>rel="prettyPhoto"</strong> to the link you want prettyPhoto to be enabled on.</li>
+			<li>Open a Image Gallery: Add <strong>rel="prettyPhoto[galeryname]"</strong> to the links you want to be included in
+			 the gallery named <strong>galeryname</strong>.</li>
+			<li>Complete list of other things you can load in it can be found on the 
+			<a href="http://www.no-margin-for-errors.com/projects/prettyphoto-jquery-lightbox-clone/" target="_blank">PrettyPhoto Website</a>,
+			the Demos section</li> 
+		</ul>
+		
+		<h3 id="nav75">5. <a href="http://css-tricks.com/inset-border-effect/" target="_blank">InsetBorderEfect</a> - give images a border that dissapears
+		 on hover revealing the entire image</h3> 
+		
+		<img src="assets/images/insetborder.jpg">
+		
+		<pre>
+		
+&lt;!-- //////// Inset Border ////////  --&gt;
+&lt;script type="text/javascript" src="_layout/js/insetbordereffect/jquery.insetBorderEffect.min.js"&gt;&lt;/script&gt;	
+
+&lt;!-- //////// Customs JS  ////////  --&gt;	
+&lt;script type="text/javascript"&gt;
+/* &lt;![CDATA[ */	                                         
+	$(document).ready(function(){
+		
+	...
+	
+			// inset border of portofolio item imgs
+			$('#portfolio .portfolio-item img').insetBorder({
+			  inset : 10,
+			  borderColor : '#fff',
+			  speed : 250,
+			  borderType : 'solid'
+			});
+	
+	...
+		
+	});
+/* ]]&gt; */			
+&lt;/script&gt; 
+		</pre>
+		
+		<p>This plugin puts a border around the targeted elements (typically images), but unlike normal CSS borders it covers
+		 up part of the image. When the element is hovered over, the border animates to the sides, revealing the whole image. </p>
+		
+		 <p>Usage:</p>
+      
+      <p>Simple:</p>
+      
+      <pre>$("img").insetBorder();</pre>
+      
+      <p>All options:</p>
+      
+      <pre>$("img").insetBorder({
+	  speed          : 1000,           // 1000 = 1 second, default 250
+	  borderColor    : "orangered",    // Default white (#ffffff)
+	  inset          : 10,             // Border width, default 10px
+	  borderType     : "solid",        // Border type, e.g. dashed
+	  outerClass     : "ibe_outer",    // Class name of outer wrap
+	  innerClass     : "ibe_inner"     // Class name of inner border
+	});</pre>
+
+		<p>Just replace the img in the above two examples with another css selector, depending on what you are targeting.</p>
+		
+		
+		<h3 id="nav76">6. <a href="http://cssglobe.com/post/5780/easy-slider-17-numeric-navigation-jquery-slider" target="_blank">EasySlider</a> - numeric navigation
+		 jQuery slider </h3>
+		 
+		 <img src="assets/images/easyslider.jpg">
+		 
+		 <pre>	
+&lt;!-- //////// Easy Slider ////////  --&gt;
+&lt;script type="text/javascript" src="_layout/js/easyslider/jquery.easyslider.js"&gt;&lt;/script&gt;
+&lt;link href="_layout/js/easyslider/css.easyslider.css" rel="stylesheet" type="text/css" /&gt;
+
+&lt;!-- //////// Customs JS  ////////  --&gt;	
+&lt;script type="text/javascript"&gt;
+/* &lt;![CDATA[ */	                                         
+	$(document).ready(function(){
+		
+	...
+	
+			// easy slider
+			$("<span class="highlight">#slide2</span>").easySlider({
+				auto: true,
+				continuous: true,
+				speed: 800,
+				controlsShow: true,
+				numeric: true,
+				numericId: 'controls'
+			});
+	
+	...	
+	
+	});
+/* ]]&gt; */			
+&lt;/script&gt; 	
+
+-------------
+
+&lt;div class="slider-wrap-2"&gt;
+&lt;div class="slider-2" <span class="highlight">id="slide2"</span>&gt;
+	&lt;ul&gt;			
+		&lt;li&gt;&lt;img src="_content/678x312-placeholder.jpg" width="678" height="312" alt="" /&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;img src="_content/678x312-placeholder.jpg" width="678" height="312" alt="" /&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;img src="_content/678x312-placeholder.jpg" width="678" height="312" alt="" /&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;img src="_content/678x312-placeholder.jpg" width="678" height="312" alt="" /&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;img src="_content/678x312-placeholder.jpg" width="678" height="312" alt="" /&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;&lt;!-- end .slider --&gt;
+&lt;/div&gt;&lt;!-- end .slider-wrap --&gt;	
+		</pre>
+		 
+		 <p>Easyslider transform an unordered list in a slideshow.</p>
+		 
+		 <p>Usage:</p>
+		 <ul>
+		 	<li>in <strong>_layout/js/easyslider/css.easyslider.css</strong> you give the width and height of the slider</li>
+			<li>in the head of the html page you call the slider for a certain #id ( <a href="http://cssglobe.com/post/5780/easy-slider-17-numeric-navigation-jquery-slider">full list of options here</a> )</li>
+			<li>if you want more slides then just add extra &lt;li&gt;'s (list items) to the &lt;ul&gt; </li>
+			<li>if you want two sliders on a page for the secound one you have to change it's <strong>numericId</strong> ( the id of the navigation
+			 controls for that slider) and give it something different from the other slider and then go into css.easyslider.css and define the css
+			 rules for it (you could multiply the ones for #controls and then just replace the id with the new one you gave to the numericId
+			 of the second slider)</li>
+		 </ul>
+		 
+		 <p><strong>Note:</strong> Do not use the insetborder script on content inside the slider as it will break it!</p>
+		 	
+		<hr />
+		
+		<h2 id="nav8">Credits <a href="#nav0" class="clear">top</a></h2>
+		
+		<p>This template is possible in part also thanks to:</p>
+		
+		<ol>
+			<li>Icons: <a href="http://www.iconfinder.com/icondetails/49501/32/cv_detail_icon" target="_blank">favicon</a>,
+				 <a href="http://jwloh.deviantart.com/art/Aquaticus-Social-91014249" target="_blank">social media icons</a>.</li>
+			<li>Fonts: <a href="http://www.fontsquirrel.com/fonts/Hattori-Hanzo" target="_blank">Hattori-Hanzo</a></li>	
+			<li><a href="http://docs.jquery.com/Downloading_jQuery" target="_blank">JQuery</a> - Javascript Framework</li>
+			<li><a href="http://wiki.github.com/sorccu/cufon" target="_blank">Cufon</a> - font replacement</li>	 
+			<li><a href="http://dillerdesign.com/experiment/DD_belatedPNG/#license" target="_blank">DD_BelatedPNG</a>- png transparancy fix for IE6</li>
+			<li><a href="http://onehackoranother.com/projects/jquery/tipsy/" target="_blank">Tipsy</a> - display tooltips out of anchor's title attribute</li>
+			<li><a href="http://cssglobe.com/post/5780/easy-slider-17-numeric-navigation-jquery-slider" target="_blank">EasySlider</a> - numeric navigation
+			 jQuery slider </li>
+			<li><a href="http://www.no-margin-for-errors.com/projects/prettyphoto-jquery-lightbox-clone/" target="_blank">PrettyPhoto</a> - lightbox script</li>
+			<li><a href="http://css-tricks.com/inset-border-effect/" target="_blank">InsetBorderEfect</a> - give images a border that dissapears
+			 on hover revealing more of the image</li> 
+			<li><a href="http://tweet.seaofclouds.com/" target="_blank">Tweet</a> - Display latest tweet</li> 	 
+		</ol>
+
+		
+		<hr />
+	
+		
+	</div><!-- end container -->	
+		
+</body>
+</html>

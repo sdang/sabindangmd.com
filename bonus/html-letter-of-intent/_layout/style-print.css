@@ -1,0 +1,10 @@
+/* 
+	Print Stylesheet
+*/
+ 
+	#wrap{ width: 100%; margin: 10px; float: none; }
+	#header, #footer{ display:none; }
+
+	#content{ padding:0; }
+	
+	.col-1{ width: 100%; }

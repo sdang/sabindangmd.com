@@ -1,0 +1,398 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	
+	<title>Documentation</title>
+	
+	<!-- Framework CSS -->
+	<link rel="stylesheet" href="assets/blueprint-css/screen.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="assets/blueprint-css/print.css" type="text/css" media="print">
+	<!--[if lt IE 8]><link rel="stylesheet" href="assets/blueprint-css/ie.css" type="text/css" media="screen, projection"><![endif]-->
+	<link rel="stylesheet" href="assets/blueprint-css/plugins/fancy-type/screen.css" type="text/css" media="screen, projection">
+	<style type="text/css" media="screen">
+		p, table, hr, .box { margin-bottom:25px; }
+		.box p { margin-bottom:10px; }
+	</style>
+	
+</head>
+<body>
+<div class="container">
+		
+		<h1 class="center">Newsletter Template Help</h1>
+		
+		<br>
+				
+		<h2 id="nav0">Table of Contents</h2>
+		<ol>
+			<li><a href="#nav1">General tips on editing newsletters</a></li>
+			<li><a href="#nav2">How to edit this newsletter </a></li>
+			<li><a href="#nav3">Before sending the newsletter</a></li>
+		</ol>
+		
+		<hr />
+		
+		<h2 id="nav1">General tips on editing newsletters <a href="#nav0" class="clear">top</a></h2>
+		
+			<p>Email clients have little support for CSS so if you want to design an html email that renders 
+		 the same in different email clients then an XHTML &amp; CSS aproach to the design is wrong. 
+		 You need to go back to TABLE based layouts, using minimum CSS for presentation purposes (not building the layout with it).</p>
+		 
+		<p>I though it would be a good idea to start the documentation with a refresher on the topic that will
+		 make it easier to understand what is going on in the newsletters provided. Below you will find general
+		 guidlines, links to external references and example source code.  </p> 
+		
+		<h3>Designing layouts using tables:</h3>
+
+		<ul>
+			<li>Use <a href="http://www.w3schools.com/html/html_tables.asp">tables</a> for layouts</li>
+			<li>since the &lt;html&gt;, &lt;head&gt;, and &lt;body&gt; tags are generally stripped so as not to interfere with the email clients
+			 own code you should wrap the whole design in  a 100% width table and set the backgound you wanted the body to have to this table
+			 <pre>
+ 
+&lt;!-- wrapper table --&gt;
+&lt;table cellpadding="0" cellspacing="0" width="100%"  bgcolor="#4C535C"&gt;&lt;tr&gt;&lt;td&gt;
+
+...
+
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;!-- end wrapper table--&gt;	
+			 </pre>
+			 
+			 </li>
+			
+			<li>the width of the actual content should be close to 600px so the email can be viewed in the majority of email clients without the need
+			 to horizontal scroll
+			 <pre>
+			 
+&lt;!-- main content wrap --&gt;
+&lt;table cellpadding="0" cellspacing="0" width="660" bgcolor="#ffffff" border="0"
+rules="none" frame="border"  align="center" class="main-content-wrap"&gt;&lt;tr&gt;&lt;td&gt;
+
+// newsletter content here
+
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;!-- end main content wrap --&gt;
+			 </pre>
+			 
+			 </li>
+			
+			<li>if you want to set background images use the "background" attribute of tables rather then CSS. Make sure to set a background
+			 color using "<a href="http://www.w3schools.com/tags/att_table_bgcolor.asp">bgcolor</a>" that allows the text to be read in case
+			 the background you set isn't loaded
+			 <pre>
+			 
+&lt;table cellpadding="0" cellspacing="0" width="100%" <span class="highlight">bgcolor="#E3E3E3" background="images/bg.png"</span>&gt;			 
+			 </pre>
+
+			 </li>
+			 
+			<li>to align content inside a table cell (&lt;td&gt;) make use of the valign and align attributes
+			<pre>
+			
+&lt;td width="315" <span class="highlight">valign="top" align="left"</span>&gt;		
+			</pre>
+			<ol>
+				<li><strong><a href="http://www.w3schools.com/tags/att_td_valign.asp">valign</a></strong> - specifies the vertical alignment of the content in a cell.
+				Most of the cases you want it set to "top". Default value is "middle". </li>
+
+				<li><strong><a href="http://www.w3schools.com/tags/att_div_align.asp">align</a></strong> - specifies the horizontal alignment of the content inside a
+				 cell. Default value is "left" so you have to use it only when you want the text to be centered or aligned right</li>
+			</ol>
+			</li>
+			
+			<li>images are blocked by default in some email clients so make sure to set "width", "height" and "alt" so the design doesn't break. If you want to align a image left or right use the &lt;img&gt; tags "<a href="http://www.w3schools.com/tags/att_img_align.asp">align</a>" attribute along with the "<a href="http://www.w3schools.com/tags/att_img_hspace.asp">hspace</a>" attribute to create some whitespace on the left and right side of an image.
+			<pre>
+	
+&lt;img src="placeholder/120x90.jpg" <span class="highlight">width="120" height="90" alt=""</span>&gt;
+
+&lt;img src="placeholder/120x90.jpg" width="120" height="90" <span class="highlight">align="right" hspace="10"</span> alt=""&gt;		
+			</pre>
+			</li>
+			
+			<li>the "<a href="http://www.w3schools.com/tags/att_td_colspan.asp">colspan</a>" attribute is not widely suported  so it is recommended
+			 that you don't use it</li>
+
+			
+			<li>besides the wrapper tables try not to nest tables or make very complicated ones. Use a stacking system instead (more about it later
+			 in the documentation).</li>
+		</ul>		
+
+		<h3>Using CSS in newsletters</h3>	
+		<ul>
+			<li>don't link to an external stylesheet but use embedded css or even better inline css</li>
+					
+			<li>if you use embedded css make sure you define &lt;style type="text/css"&gt; /*  your css */ &lt;/style&gt;under the &lt;body&gt;
+
+			 tag. Also email readers consider that a  newline starting with the character . (dot) is the end of the email. So if you define
+			 classes make sure to add a space before the declaration.</li>
+					
+			<li>use inline css &lt;p style="...."&gt; to make sure that the css works in every reader. I'll present a easy way to work
+			 with embedded CSS while designing the html  email and then switch it to  inline css almost instantly just before sending it out.</li>
+			
+			<li>do not use CSS short hand</li>
+			
+			<li>&lt;div&gt;'s are not suported and you should not use them</li>
+			
+			<li>&lt;span&gt;'s being inline elements are suported and are useful</li> 
+			
+			<li>use basic css. check <a href="http://www.campaignmonitor.com/css/">http://www.campaignmonitor.com/css/</a> to see exactly
+			 what css is suported by email clients</li> 			
+		</ul>
+		
+		<hr />
+		
+		<h2 id="nav2">How to edit this newsletter <a href="#nav0" class="clear">top</a></h2>
+		
+		<p>Some of the cahnges are so simple that it is enough to point out what part of the source code needs to be edited.
+		For more complicated ones I will provide aditinal info.</p>
+		
+		<img src="assets/images/1.jpg">
+		
+		<h3>1. Change the background color</h3>
+		
+		<p>To change the background color find the following lines and change <strong>bgcolor</strong></p>
+		
+		<pre>
+		
+&lt;body leftmargin="0" marginwidth="0" topmargin="0" marginheight="0" offset="0" <span class="highlight">bgcolor="#4C535C"</span>&gt;
+
+	&lt;!-- wrapper table --&gt;
+	&lt;table cellpadding="0" cellspacing="0" width="100%"  <span class="highlight">bgcolor="#4C535C"</span>&gt;&lt;tr&gt;&lt;td&gt;		
+		</pre>
+		
+		<h3>2. Add the view in browser link</h3>
+		
+		<pre>
+		
+&lt;table cellpadding="0" cellspacing="0" width="600" align="center"&gt;
+	&lt;tr&gt;
+		&lt;td valign="top" align="center" class="view-browser"&gt;
+			<span class="highlight">Email not displaying correctly? &lt;a href="#"&gt;View it in your browser.&lt;/a&gt;</span>
+		&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;		
+		</pre>
+		
+		<h3>3. Change the logo and the website</h3>
+		
+		<p>To change the logo open the logo.jpg image in the folder <strong>/images</strong> and edit it.</p>
+		
+		<pre>
+		
+&lt;!-- header --&gt;
+&lt;table cellpadding="0" cellspacing="0" width="600" align="center"&gt;
+	&lt;tr&gt;
+		&lt;td width="390" valign="top"&gt;
+			<span class="highlight">&lt;img src="images/logo.jpg" width="375" height="37" alt=""&gt;</span>
+		&lt;/td&gt;
+		&lt;td width="210" valign="top" align="right" class="ourwebsite"&gt;
+			<span class="highlight">
+			Visit my website
+			&lt;br&gt;&lt;b&gt;&lt;a href="#"&gt;www.johnsmith.com&lt;/a&gt;&lt;/b&gt;</span>
+			
+		&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;!-- end header --&gt;		
+		</pre>
+		
+		<h3>4. Change the contact info and the subscription options</h3>
+		
+		<pre>
+		
+&lt;!-- footer --&gt;
+&lt;table cellpadding="0" cellspacing="0" width="600" align="center"&gt;
+	&lt;tr&gt;
+		&lt;td width="315" valign="top"&gt;
+			<span class="highlight">
+			&lt;p&gt;&lt;b&gt;John Smith&lt;/b&gt;,
+			&lt;br&gt;1234 Some Adress, Nashville
+			&lt;br&gt;T: +1 234 567 8910
+			&lt;br&gt;E: &lt;a href="mailto:mail@yoursitename.com"&gt;mail@yoursitename.com&lt;/a&gt;&lt;/p&gt;</span>
+			
+		&lt;/td&gt;
+		&lt;td width="30"&gt;&lt;img src="images/spacer15x15.gif" width="30" height="30" alt=""&gt;&lt;/td&gt;&lt;!-- spacer column --&gt;
+		&lt;td width="255" valign="top" align="left"&gt;
+			<span class="highlight">
+			&lt;p&gt;This newsletter was sent to mail@asite.com
+			&lt;br&gt;from YourCompany because you subscribed
+			&lt;br&gt;&lt;a href="#"&gt;Manage your Subscription&lt;/a&gt;&lt;/p&gt;</span>
+			
+		&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;!-- end footer --&gt;		
+		</pre>
+		
+		<h3>5. Change the social media and contact links</h3>
+		 
+		<pre>
+		
+&lt;!-- social media + more --&gt;
+&lt;table cellpadding="0" cellspacing="0" width="600" align="center"&gt;
+	&lt;tr&gt;
+	<span class="highlight">
+		&lt;td width="25"  height="25" align="right"&gt;&lt;img src="images/facebook.png" width="24" height="24" alt=""&gt;&lt;/td&gt;
+		&lt;td width="135" height="25" align="center"&gt;&lt;a href="http://www.facebook.com/"&gt;Join me on Facebook&lt;/a&gt; &lt;/td&gt;
+		
+		&lt;td width="25"  height="25" align="right"&gt;&lt;img src="images/twitter.png" width="24" height="24" alt=""&gt;&lt;/td&gt;
+		&lt;td width="135" height="25" align="center"&gt;&lt;a href="http://twitter.com/"&gt;Follow me on Twitter&lt;/a&gt; &lt;/td&gt;
+		
+		&lt;td width="25"  height="25" align="right"&gt;&lt;img src="images/linkedin.png" width="24" height="24" alt=""&gt;&lt;/td&gt;
+		&lt;td width="135" height="25" align="center"&gt;&lt;a href="http://www.linkedin.com/"&gt;Connect on LinkedIn&lt;/a&gt; &lt;/td&gt;
+		
+		&lt;td width="25"  height="25" align="right"&gt;&lt;img src="images/contact.png" width="24" height="24" alt=""&gt;&lt;/td&gt;
+		&lt;td width="90"  height="25" align="center"&gt;&lt;a href="mailto:mail@yoursitename.com"&gt;Contact me&lt;/a&gt;&lt;/td&gt;	</span>	
+		
+	&lt;/tr&gt;	
+&lt;/table&gt;
+&lt;!-- end social media + more --&gt;		
+		</pre>
+		
+		<h3>6. Change the copyright notice</h3>
+		 
+		<pre>
+		
+&lt;table cellpadding="0" cellspacing="0" width="600" align="center"&gt;
+	&lt;tr&gt;
+		&lt;td valign="top" align="center" class="copyright"&gt;
+			<span class="highlight">&amp;copy; 2010 &lt;b&gt;John Smith&lt;/b&gt; - Job title / Expertise. All rights reserved.</span>
+		&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;		
+		</pre>
+		 
+		<h3>7. Add the main content</h3>
+		
+		<ul>
+		<li>Start adding the main content directly below the comment that says <span class="highlight">&lt;!-- main newsletter content here --&gt;</span></li>
+		<li>Add the content using &lt;h1&gt; -&gt; &lt;h4&gt;, &lt;p&gt;, &lt;a&gt;, &lt;ul&gt;,&lt;img&gt; etc.
+		<pre>
+		
+&lt;h1&gt; Lorem ipsum dolor sit amet &lt;/h1&gt;
+&lt;h2&gt; Lorem ipsum dolor sit amet &lt;/h2&gt;
+&lt;h3&gt; Lorem ipsum dolor sit amet &lt;/h3&gt;
+&lt;h4&gt; Lorem ipsum dolor sit amet &lt;/h4&gt;
+
+&lt;p&gt;
+	Aenean et ipsum nibh, quis aliquet nunc. Phasellus nisi
+	lectus, elementum eget lobortis nec, congue vulputate.
+&lt;/p&gt;
+
+..  &lt;b&gt; quis aliquet nunc &lt;/b&gt; ..
+
+.. &lt;i&gt; quis aliquet nunc &lt;/i&gt; ..
+
+&lt;a href="#" title=""&gt; quis aliquet nunc &lt;/a&gt;
+
+&lt;ul&gt;
+	&lt;li&gt;Lorem ipsum dolor sit ipsum dolor sit&lt;/li&gt;
+	&lt;li&gt;Consectetur adipisicing elit adipisicing elit&lt;/li&gt;
+	&lt;li&gt;Incididunt ut labore et dolore ipsum dolor&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+	&lt;li&gt;Lorem ipsum dolor sit ipsum dolor sit&lt;/li&gt;
+	&lt;li&gt;Consectetur adipisicing elit adipisicing elit&lt;/li&gt;
+	&lt;li&gt;Incididunt ut labore et dolore ipsum dolor&lt;/li&gt;
+&lt;/ol&gt;
+		</pre>
+		</li>
+
+		<li>Use &lt;b&gt; instead of &lt;strong&gt; and &lt;i&gt; instead of &lt;em&gt;</li>
+		
+		<li>To align text you have available the classes: <span class="highlight">.text-align-center</span> and <span class="highlight">.text-align-right</span>
+		<pre>
+		
+&lt;p&gt; Text aligned to the left &lt;/p&gt;
+
+&lt;p class="text-align-center"&gt; Text aligned centrally &lt;/p&gt;
+
+&lt;p class="text-align-right"&gt; Text aligned to the right &lt;/p&gt;		
+		</pre></li>	
+		
+		<li>If you have to align pictures use both the align attribute as well as <span class="highlight">class="img-left-aligned" and class="img-right-aligned"</span>.
+		You can change the way these elements look in the &lt;&lt;style&gt;&gt; section.
+		<pre>
+
+&lt;img src="placeholder/120x90.jpg"&gt;
+		
+&lt;img src="placeholder/120x90.jpg" <span class="highlight">align="left"</span> <span class="highlight">class="img-left-aligned"</span>&gt;
+
+&lt;img src="placeholder/120x90.jpg" <span class="highlight">align="right"</span> <span class="highlight">class="img-right-aligned"</span>&gt;
+		</pre></li>
+
+		<li>You can use dividers in the main content table
+		<pre>
+		
+&lt;img src="images/module-divider-660x31.gif" width="660" height="31" alt=""&gt;
+
+&lt;img src="images/module-divider-660x31-2.gif" width="660" height="31" alt=""&gt;
+
+&lt;img src="images/module-divider-660x15.gif" width="660" height="15" alt=""&gt;
+
+&lt;img src="images/module-divider-600x31.gif" width="600" height="31" alt="" /&gt;		
+		</pre></li>
+		
+		<li>Sometimes you will need to make use of <strong>&lt;br&gt;</strong> elements to align and separate content.</li>
+		</ul>
+		 
+		<hr />
+		
+		<h2 id="nav3">Before sending the newsletter <a href="#nav0" class="clear">top</a></h2>
+		
+		<ul>
+			<li><p>Transform the embedded Css to inline Css<br>
+			
+			This will ensure the css is used by the majority of client email readers.<br>
+
+	
+			The way to do this is:</p>
+	
+			<p>1. Change in the code each class="" with style="... the rules in the class definition in the header ..."<br>
+	
+
+ex. <span class="highlight">&lt;img src="placeholder/120x90.jpg" width="120" height="90" alt="" align="right" <strong>class="img-right-aligned"</strong>&gt;</span> becomes
+<span class="highlight">&lt;img src="placeholder/120x90.jpg" width="120" height="90" alt="" align="right" <strong>style="margin-left:20px; margin-top:0px; margin-bottom:5px; margin-top:5px;"&gt;</strong></span></p>
+
+			<p>2. If you have general rules in the css you must add them to every tag:<br>
+
+		
+		ex.  in the css<br>
+				
+			table{ color:#575757; font-family:Arial, sans-serif; font-size:12px; line-height:20px; }<br>	
+			   in the html	<br>
+
+			 &lt;table width="600" cellpadding="0" cellspacing="0" border="0" align="center"&gt;<br>	
+			   becomes<br>
+			&lt;table width="600" cellpadding="0" cellspacing="0" border="0" align="center" style="color:#575757; font-family:Arial, sans-serif; font-size:12px; line-height:20px;"&gt;</p>
+
+			
+			<p>Once finish you should delete the &lt;head&gt;&lt;/head&gt; section completly. Make sure the page still works.</p>
+		
+			<p>Needless to say this is a painstaking process. Luckily there is an free online service that does all of this automatically;
+			 it is called premailer and is found as  <a href="http://premailer.dialect.ca/">http://premailer.dialect.ca/</a></p>
+
+		
+			<p>Visit the page, select "Use HTML as the source" and copy paste your code that has the CSS embedded in the &lt;head&gt; section.
+			 It will create a version with the css inlined.</p>
+
+			</li>
+			
+			<li>Load all your images on a webserver and change the paths in the html to absolute paths.<br>
+			</li>
+			
+			<li>Send the html email with your favorite application or online services like Campaign Monitor and Mail Chimp.<br>
+
+			</li>				
+		</ul>
+
+		<hr />
+	
+		
+	</div><!-- end container -->	
+		
+</body>
+</html>
