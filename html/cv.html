@@ -1,0 +1,439 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+	<title> Cv/Resume no. 1 :: Clean CV / Resume / Portfolio Website :: </title>
+	
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	
+	<meta name="description" content="Sabin Dang, MD" />
+	<meta name="keywords" content="Sabin, Dang, Sabin Dang, Ophthalmology, Ophthalmologist" />
+	
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+	
+	<!-- //////// Favicon ////////  -->
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico"  />
+	
+	<!-- //////// Css StyleSheets ////////  -->
+	<link href="_layout/style.css"       rel="stylesheet" type="text/css" media="all"   />
+	<link href="_layout/style-print.css" rel="stylesheet" type="text/css" media="print" />
+	
+	<!-- //////// jQuery ////////  -->
+	<script src="_layout/js/jquery-1.4.2.min.js" type="text/javascript"></script>
+	
+	<!-- //////// DD_belatedPNG - Png Fix for IE ////////  -->
+	<!--[if IE 6 ]>
+		<script type="text/javascript" src="_layout/js/DD_belatedPNG_0.0.7a-min.js"></script>
+		<script type="text/javascript">
+			DD_belatedPNG.fix('#header,#content,#footer');
+		</script>
+	<![endif]-->
+	
+	<!-- //////// Cufon Font Replacement ////////  -->
+	<script type="text/javascript" src="_layout/js/cufon/cufon-yui.js"></script>
+	<script type="text/javascript" src="_layout/js/cufon/hattori_hanzo.font.js"></script>
+
+	<!-- //////// Tipsy - custom Tooltips ////////  -->
+	<link rel="stylesheet" type="text/css" href="_layout/js/tipsy/css.tipsy.css" />
+	<script type="text/javascript" src="_layout/js/tipsy/jquery.tipsy.js"></script>
+
+	<!-- //////// PrettyPhoto ////////  -->
+	<link rel="stylesheet" type="text/css" href="_layout/js/prettyphoto/css.prettyPhoto.css" />
+	<script type="text/javascript" src="_layout/js/prettyphoto/jquery.prettyPhoto.js"></script>
+	
+	<!-- //////// Customs JS  ////////  -->	
+	<script type="text/javascript">
+	/* <![CDATA[ */	                                         
+		$(document).ready(function(){
+		
+			// font replacement
+			if ( ! ( $.browser.msie && ($.browser.version == 6) ) )
+			{ 	
+				$("h1#name").css({'font-size':'46px', 'padding-top':'20px' , 'margin-bottom':'0px' });
+				Cufon.replace('#portfolio h2, h2.cv-section-name, h1#name'); // using cufon with IE6 breaks the layout in some cases
+				
+			}	
+			
+			// tooltips
+			$('.tip').tipsy({gravity: 'e'});	//  apply class .tip to any <a> tag to make it's  title be displayed like a tooltip
+			
+			// lightbox
+			$("a[rel^='prettyPhoto']").prettyPhoto({
+				theme: 'light_square',
+				hideflash: false, 		// Hides all the flash object on a page, set to TRUE if flash appears over prettyPhoto
+				wmode: 'opaque', 		// Set the flash wmode attribute
+				autoplay: true, 		// Automatically start videos: True/False
+				modal: false 			// If set to true, only the close button will close the window
+			});
+		
+		});
+	/* ]]> */			
+	</script> 
+	
+</head>
+<body>
+	
+	<noscript>
+		<link href="_layout/nojs.css" rel="stylesheet" type="text/css" media="all" />
+		<div id="nojs">JavaScript seems to be Disabled! This website works best with JavaScript enabled.</div>
+	</noscript>
+	
+	<div id="wrap">
+	
+		<div id="header">
+			
+			<div id="block-top"></div>
+			
+			<div id="personal-info" class="fixed">
+			
+				<a id="picture-of-you" href="_content/640x550-placeholder.jpg" title="your picture" rel="prettyPhoto">
+					<img src="_content/100x100-placeholder.jpg" width="100" height="100" alt="" />
+				</a>
+				
+				<h1 id="name">Sabin Dang, MD</h1>
+				<h2 id="what-you-do">Medical Resident &amp; Software Developer&nbsp;</h2>
+				
+			</div><!-- end #personal-info -->
+					
+			<ul id="nav" class="fixed">
+				<li><a href="index.html" class="active">Curriculum Vitae</a></li>
+				<li>/</li>
+				<li><a href="projects.html">Projects</a></li>
+				<li>/</li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul><!-- end #nav -->
+
+			<div class="divider"></div>
+			
+		</div><!-- end #header -->
+		
+		<div id="content" class="fixed">
+		<!-- ////////////////////////////////////////////////////////////////////////////////////// -->
+
+			<div id="cv-1">
+			
+				<!-- // PERSONAL DETAILS     ////////////////////////////////////////////////////// -->
+				<div class="cv-section col-1 fixed">
+				
+					<h2 class="cv-section-name">Personal Details</h2>
+					
+					<ul class="cv-section-items">
+						
+						<li class="cv-item">
+							<span class="topic">Name:</span>         
+							Sabin Dang, M.D.<br/>
+							<span class="topic">Phone:</span>
+							(310) 526-3303<br/>
+							<span class="topic">Email:</span>
+							<a href="mailto:sabin@sabindang.com">sabin@sabindang.com</a>
+						</li>
+							
+					</ul><!-- end .cv-section-items -->
+
+				</div><!-- end .cv-section -->
+				
+				<!-- // EDUCATION            ////////////////////////////////////////////////////// -->
+				<div class="cv-section col-1 fixed">
+				
+					<h2 class="cv-section-name">Education</h2>
+					
+					<ul class="cv-section-items">
+					
+						<li class="cv-item">
+							<h4>2007 - 2011</h4>
+							<h2>CDU/UCLA Medical Education Program</h2>
+							<h3>University of California, Los Angeles / Charles R. Drew University</h3>
+							<p>Doctorate of Medicine awarded June 2011. Elected to the Alpha Omega Alpha (AΩA) medical honor society</p>
+						</li>
+						<li class="cv-item">
+							<h4>1998 - 2003</h4>
+							<h2>University of Southern California</h2>
+							<h3>University of California, Los Angeles / Charles R. Drew University</h3>
+							<p>Bachelor of Arts in Psychology awarded May 2003</p>
+						</li>						
+					
+					</ul><!-- end .cv-section-items -->
+				
+				</div><!-- end .cv-section -->
+				
+				<!-- // RESIDENCY            ////////////////////////////////////////////////////// -->
+				<div class="cv-section col-1 fixed">
+				
+					<h2 class="cv-section-name">Internship &amp; Residency</h2>
+					
+					<ul class="cv-section-items">
+					
+						<li class="cv-item">
+							<h4>2011-2012</h4>
+							<h2>Internship in Internal Medicine</h2>
+							<h3>UCLA-Olive View Medical Center</h3>
+						</li>
+						<li class="cv-item">
+							<h4>Planned, 2012-2015</h4>
+							<h2>Residency in Ophthalmology</h2>
+							<h3>Kresge Eye Institute, Wayne State University</h3>
+						</li>					
+					
+					</ul><!-- end .cv-section-items -->
+				
+				</div><!-- end .cv-section -->
+				
+				<!-- // EXAMINATION      ////////////////////////////////////////////////////// -->
+				<div class="cv-section col-1 fixed">
+				
+					<h2 class="cv-section-name">Board Certification</h2>
+					
+					<ul class="cv-section-items">
+					
+						<li class="cv-item">
+							<h5>2009</h5>
+							United States Medical Licensing Examination Step 1<br/>
+							<h5>2010</h5>
+							United States Medical Licensing Examination Step 2 CS<br/>
+							<h5>2010</h5>
+							United States Medical Licensing Examination Step 2 CK
+						</li>
+						
+					</ul><!-- end .cv-section-items -->
+				
+				</div><!-- end .cv-section -->
+				
+				<!-- // RESEARCH      ////////////////////////////////////////////////////// -->
+				<div class="cv-section col-1 fixed">
+				
+					<h2 class="cv-section-name">Research/Professional Interests</h2>
+
+					<ul class="cv-section-items">
+					
+						<li class="cv-item">
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+						</li>
+					</ul>
+					
+				</div>
+					
+				<div class="cv-section col-1 fixed">
+				
+					<h2 class="cv-section-name">Research Experience</h2>
+					
+					<ul class="cv-section-items">
+					
+						<li class="cv-item">
+							<h4>2010-Present</h4>
+							<h2>Research with Dr. Robert A. Goldberg &amp; Dr. Ronald Mancini</h2>
+							<h3>Jules Stein Eye Institute, University of California, Los Angeles</h3>
+							<p>Examined re-operation rates for orbital decompressions due to Graves ophthalmopathy 
+							and characterized complications. Developing software to automatically characterize lid
+							contour from patient photographs for use as a potential research and clinical tool.</p>
+						</li>
+						
+						<li class="cv-item">
+							<h4>2008-2011</h4>
+							<h2>Thesis Research with Dr. Ross Donaldson</h2>
+							<h3>Emergency Medicine Department, Harbor-UCLA Medical Center</h3>
+							<p>Created software to automatically calculate a National Emergency Department Overcrowding
+							Scale (NEDOCS) score with the aim of identifying factors which contribute to ED overcrowding
+							in county facilities. It is now being used to dynamically alter hospital policy based upon
+							level of ED overcrowding.</p>
+						</li>
+						
+						<li class="cv-item">
+							<h4>2005-2007</h4>
+							<h2>Research with Dr. Nancy Kanwisher</h2>
+							<h3>Brain &amp; Cognitive Science Department, Massachusetts Institute of Technology<br/>
+							McGovern Institute for Brain Research</h3>
+							<p>Conducted fMRI studies investigating the functional specialization of human cortex involved
+							in high-level visual processing.</p>
+						</li>
+						
+						<li class="cv-item">
+							<h4>2001-2003</h4>
+							<h2>Undergraduate Research with Dr. Bosco Tjan</h2>
+							<h3>Department of Psychology, University of Southern California</h3>
+							<p>Conducted behavioral studies quantifying and modeling low-level visual perception to 
+							crowding stimuli.</p>
+						</li>
+						
+					</ul><!-- end .cv-section-items -->
+				
+				</div><!-- end .cv-section -->
+				
+				<!-- // Publications      ////////////////////////////////////////////////////// -->
+				<div class="cv-section col-1 fixed">
+				
+					<h2 class="cv-section-name">Publications</h2>
+					
+					<ul class="cv-section-items">
+					
+						<li class="cv-item">
+							<h4><a target="_blank" href='pubs/williams.et.al.2008.pdf'><img src="_content/pdf.gif" /></a></h4>
+							Williams M, Baker CI, Op de Beeck HP, Shim WM, <span class='author'>Dang S</span>, 
+							Triantafyllou C, Kanwisher N. <span class='title'>Feedback of Visual Object Information
+							to Foveal Retinotopic Cortex</span>. <span class='journal'>Nature Neuroscience</span> 2008;11:1439-45.
+						</li>
+						
+						<li class="cv-item">
+							<h4><a target="_blank" href='pubs/schwarzlose.et.al.2008.pdf'><img src="_content/pdf.gif" /></a></h4>
+							Schwarzlose RF, Swisher JD, <span class='author'>Dang S</span>, Kanwisher N. <span class='title'>The
+							distribution of category and location information across object-selective regions in human visual cortex.</span>
+							<span class='journal'>Proc Natl Acad Sci</span> 2008;105:4447-52.
+						</li>
+						
+						<li class="cv-item">
+							<h4><a target="_blank" href='pubs/schwarzlose.et.al.2008.pdf'><img src="_content/pdf.gif" /></a></h4>
+							Williams MA, <span class='author'>Dang S</span>, Kanwisher NG. <span class='title'>Only some spatial
+							patterns of fMRI response are read out in task performance.</span>
+							<span class='journal'>Nature Neuroscience</span> 2007;10:685-6.
+						</li>
+						
+					</ul><!-- end .cv-section-items -->
+				
+				</div><!-- end .cv-section -->
+				
+				<!-- // Abstracts, Posters, Oral Presentations     //////////////////////////////////////////////// -->
+				<div class="cv-section col-1 fixed">
+				
+					<h2 class="cv-section-name">Abstracts, Posters &amp; Oral Presentations</h2>
+					
+					<ul class="cv-section-items">
+						
+						<li class="cv-item">
+							<h4><a target="_blank" href='pubs/scholarship.day.pdf'><img src="_content/pdf.gif" /></a></h4>
+							<span class='author'>Dang S</span>, Garneau H, King A, Goldberg RA, Mancini R. 
+							<span class='title'>Automated Computerized Eyelid Contour Measurement.</span> Oral Presentation,
+							David Geffen School of Medicine Scholarship Day. Los Angeles; 2011.
+						</li>
+
+						<li class="cv-item">
+							<h4><a target="_blank" href='pubs/asoprs.2010.pdf'><img src="_content/pdf.gif" /></a></h4>
+							<span class='author'>Dang S</span>, Garneau H, King A, Goldberg RA, Mancini R. 
+							<span class='title'>Automated Computerized Eyelid Contour Measurement.</span> American 
+							Society of Ophthalmic Plastic &amp; Reconstructive Surgery Annual Conference. Chicago; 2010.
+						</li>
+						
+						<li class="cv-item">
+							<h4>&nbsp;</h4>
+							Zhang-Nunes S, <span class='author'>Dang S</span>, Goldberg RA. <span class='title'>Characterization
+							and outcomes of repeat orbital decompressions.</span> Oral Presentation,  American Academy of 
+							Ophthalmology Annual Conference. Chicago; 2010.
+						</li>
+						
+						<li class="cv-item">
+							<h4><a target="_blank" href='pubs/wsmrf.2009.pdf'><img src="_content/pdf.gif" /></a></h4>
+							<span class='author'>Dang S</span>, Campbell LJ, Rodriguez MA. <span class='title'>Redesigning Clinic
+							Operations to Improve Depression Care in Public Primary Care Settings</span>. Western Student Medical
+							Research Forum. Carmel; 2009.
+						</li>
+						
+						<li class="cv-item">
+							<h4><a target="_blank" href='pubs/sfn.2007.pdf'><img src="_content/pdf.gif" /></a></h4>
+							Schwarzlose RF, <span class='author'>Dang S</span>, Kanwisher NG. <span class='title'>The distribution
+							of location information in the ventral visual pathway revealed by fMRI pattern analyses.</span> Society
+							for Neuroscience; 2007
+						</li>
+						
+						<li class="cv-item">
+							<h4>&nbsp;</h4>
+							Williams MA, Baker CI, Op De Beeck H, <span class='author'>Dang S</span>, Triantafyllou C,
+							Kanwisher NG. <span class='title'>Are spatial patterns in the lateral occipital complex position invariant?</span> 
+							ECVP. Arezza, Italy; 2007.
+						</li>
+						
+
+
+					
+					</ul>
+					
+				</div>
+				
+				<!-- // Awards     //////////////////////////////////////////////// -->
+				<div class="cv-section col-1 fixed">
+				
+					<h2 class="cv-section-name">Work Experience</h2>
+					
+					<ul class="cv-section-items">
+					
+						<li class="cv-item">
+							<h4>2005-2007</h4>
+							<h2>Reflect | Connect, Inc.</h2>
+							<h3>Director of Software Development</h3>
+							<p>Chief software architect for company's portfolio of web based applications targeting the 
+							digital imaging industry</p>
+						</li>
+						
+						<li class="cv-item">
+							<h4>1998-2004</h4>
+							<h2>Fagan Dang Digital Solutions, Inc.</h2>
+							<h3>Co-Founder</h3>
+							<p>IT consulting firm which provided small businesses with customized software to
+							automatize workflow and improve efficiency</p>
+						</li>
+						
+					</ul>
+					
+				</div>
+				
+				<!-- // Awards     //////////////////////////////////////////////// -->
+				<div class="cv-section col-1 fixed">
+				
+					<h2 class="cv-section-name">Awards</h2>
+					
+					<ul class="cv-section-items">
+					
+						<li class="cv-item">
+							<h5>2010</h5>
+							Alpha Omega Alpha Medical Honors Society<br/>
+							<h5>2009</h5>
+							Student Researcher Award, Charles Drew University<br/>
+							<h5>2007</h5>
+							MIT Excellence Award
+						</li>
+					</ul>
+					
+				</div>
+				
+				<!-- // Professional Societies     //////////////////////////////////////////////// -->
+				<div class="cv-section col-1 fixed">
+				
+					<h2 class="cv-section-name">Professional Societies</h2>
+					
+					<ul class="cv-section-items">
+					
+						<li class="cv-item">
+							Alpha Omega Alpha<br/>
+							California Medical Association<br/>
+							American Medical Association<br/>
+						</li>
+					
+					</ul>
+					
+				</div>
+				<span class='lastUpdate'>Last Updated: April 4, 2011</span>
+			</div><!-- end #cv-1 -->	
+			
+		<!-- ////////////////////////////////////////////////////////////////////////////////////// -->	
+		</div><!-- end #content -->
+		
+		<div id="footer" class="fixed">
+			
+			<div class="divider2"></div>
+			
+			<p id="copyright">&copy; 2011 Sabin Dang. All rights reserved.</p>
+			<a href="#" id="top">&#710; Top</a>
+			
+		</div><!-- end #footer -->
+		
+		<a href="javascript:window.print()" id="print" title="Print CV" class="tip">Print CV</a>
+		<a href="#" id="download" title="Download CV" class="tip">Download CV</a>
+	
+	</div><!-- end #wrap -->
+	
+	<script type="text/javascript"> Cufon.now(); </script>
+
+	<!-- analytics code here -->
+
+</body>
+</html>
