@@ -1,0 +1,6 @@
+ 
+
+ 1. The letter of intent is so simple and the code is similar with that of the
+    main template that no further explanations are necessary.
+
+ 2. The newsletter has it's own help file which you will find in the html-newsletter/help folder
