@@ -1,0 +1,3 @@
+#!/bin/sh
+
+s3sync.rb -rpv ./html/ www.sabindangmd.com:
